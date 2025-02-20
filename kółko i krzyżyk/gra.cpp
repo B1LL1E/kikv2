@@ -37,7 +37,7 @@ void gra::ruch() {
 	cout << "Ruch gracza [ " << czyjRuch << " ] " << endl;
 	cin >> pole;
 
-	pola1[pole - 1] = czyjRuch;
+	pola1[pole - 1][pole] = czyjRuch;
 
 	// zmiana gracza
 	if (czyjRuch == 'O') {

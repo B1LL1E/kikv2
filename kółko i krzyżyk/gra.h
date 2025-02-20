@@ -21,7 +21,7 @@ public:
 	char getZwyciesca();
 
 private:
-	char pola1[9];
+	char pola1[9][9];
 	char czyjRuch = 'O';
 	char zwyciesca = '-';
 	int pole = 0;
