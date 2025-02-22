@@ -9,18 +9,9 @@ int main()
     system("cls");
 
     gra gra1;
+    
 
-    gra1.drukuj();
-
-    // Ruch graczy
-    while (gra1.getZwyciesca() == '-') {
-        gra1.ruch();
-        system("cls");
-        gra1.drukuj();
-    }
-        
-    //koniec gry
-    cout << "KONIEC GRY, ZWYCIESCA TO [ " << gra1.getZwyciesca() << " ] " << endl;
+    gra1.startGry();
 }
 
 
