@@ -14,6 +14,8 @@ public:
 
 	void drukuj();
 
+	void drukuj2();
+
 	bool sprawdz();
 	bool sprawdz(int x, int y, int z);
 	bool sprawdz2(int x, int y, int z);

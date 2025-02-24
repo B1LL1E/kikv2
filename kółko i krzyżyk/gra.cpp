@@ -1,4 +1,4 @@
-#include "gra.h"
+﻿#include "gra.h"
 #include <iostream>
 
 
@@ -55,6 +55,40 @@ void gra::drukuj() {
 	}
 
 }
+
+
+
+//wersja testowa drukuj 2
+void gra::drukuj2() {
+	string znak = " | ";
+	cout << "--------------------------------------------" << endl; //▓, ▒
+	for (int i = 0; i < 9; i = i + 3) {
+		for (int j = 0; j < 3; j++) {
+			for (int k = 0; k < 3; k++) {
+				if ((i+k) == zbiorpol1) {
+					znak = " # ";
+				}
+				else {
+					znak = " ^ ";
+				}
+				cout << znak
+					<< pola1[0 + (j * 3)][i + k] << znak
+					<< pola1[1 + (j * 3)][i + k] << znak
+					<< pola1[2 + (j * 3)][i + k] << znak;
+			}
+			cout << endl;
+		}
+		cout << "--------------------------------------------" << endl << endl;
+	}
+	cout << endl;
+
+	cout << "-----------" << endl;
+	for (int i = 0; i < 9; i = i + 3) {
+		cout << duzePola1[i] << " | " << duzePola1[i + 1] << " | " << duzePola1[i + 2] << endl;
+		cout << "-----------" << endl;
+	}
+}
+
 
 void gra::ruch() {
 	cout << "Ruch gracza [ " << czyjRuch << " ] " << endl;
@@ -143,13 +177,13 @@ char gra::getZwyciesca() {
 
 void gra::startGry() {
 
-	gra::drukuj();
+	gra::drukuj2();
 
 	// Ruch graczy
 	while (zwyciesca == '-') {
 		gra::ruch();
 		system("cls");
-		gra::drukuj();
+		gra::drukuj2();
 	}
 
 	//koniec gry
